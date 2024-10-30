@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import "./Contact.css";
+import "./contact.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Landingpage/Footer";
 import BackgroundAnimation from "../BackgroundAnimation/BackgroundAnimation";
