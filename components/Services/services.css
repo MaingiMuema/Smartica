@@ -1,0 +1,199 @@
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+.services-page {
+  background: linear-gradient(135deg, #20b6d9, #f1d755);
+  min-height: 100vh;
+  padding: 6rem 5%;
+  color: #ffffff;
+}
+
+.services-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  z-index: 2;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #f1d755;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.service-card h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+.service-card p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.service-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.service-card li {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card li::before {
+  content: "✦";
+  color: #f1d755;
+  position: absolute;
+  left: 0;
+}
+
+.learn-more-btn {
+  background-color: #f1d755;
+  color: #20b6d9;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.learn-more-btn:hover {
+  background-color: #ffffff;
+  color: #20b6d9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(241, 215, 85, 0.4);
+  z-index: 2;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.cta-button {
+  background-color: #ffffff;
+  color: #20b6d9;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.cta-button:hover {
+  background-color: #f1d755;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-hero p {
+    font-size: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section {
+    padding: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+}

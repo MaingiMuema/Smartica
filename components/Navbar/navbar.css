@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #20b6d9;
+  padding: 10px 0 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #20b6d9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0 10px 0 10px;
+}
+
+.nav-menu li {
+  margin-left: 2rem;
+  padding: 0 20px 0 20px;
+  font-size: 1rem;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #fdde3a;
+}
+
+.cta-button a {
+  background-color: #fdde3a;
+  color: #20b6d9;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#demo {
+  background-color: #fdde3a;
+  color: #20b6d9;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  margin-top: -7px;
+}
+
+#demo:hover {
+  background-color: #f1d755;
+  color: #fff;
+}
+
+.cta-button a:hover {
+  background-color: #fdde3a;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #20b6d9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .menu-icon.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
