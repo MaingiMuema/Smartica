@@ -8,15 +8,15 @@ const ContactSection = () => {
       <div className="contact-content">
         <h2>Get in Touch with SMATICA</h2>
         <p>
-          We're excited to hear from you! Whether you need automation solutions,
-          web apps, or data insights, our team is ready to help.
+          We&apos;re excited to hear from you! Whether you need automation
+          solutions, web apps, or data insights, our team is ready to help.
         </p>
         <div className="contact-info">
           <FaEnvelope className="contact-icon" />
           <a href="mailto:pawadd01@gmail.com">pawadd01@gmail.com</a>
         </div>
         <p className="contact-cta">
-          Let's revolutionize your business operations through innovative
+          Let&apos;s revolutionize your business operations through innovative
           technology solutions.
         </p>
       </div>

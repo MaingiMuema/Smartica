@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
 import {
   FaLinkedin,
@@ -41,44 +42,45 @@ const teamMembers = [
 const AboutUsPage = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      require("particles.js");
-      particlesJS("vision-particles", {
-        particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: false },
-          size: { value: 3, random: true },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 1,
+      import("particles.js").then(() => {
+        particlesJS("vision-particles", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+            },
           },
-          move: {
-            enable: true,
-            speed: 6,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true,
+            },
+            modes: {
+              repulse: { distance: 100, duration: 0.4 },
+              push: { particles_nb: 4 },
+            },
           },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            repulse: { distance: 100, duration: 0.4 },
-            push: { particles_nb: 4 },
-          },
-        },
-        retina_detect: true,
+          retina_detect: true,
+        });
       });
     }
   }, []);
@@ -133,15 +135,15 @@ const AboutUsPage = () => {
           <p>
             At SMATICA Limited, we leverage our expertise in automation,
             development, and data analysis to create solutions that meet and
-            exceed our clients' expectations. Our strength lies in our talented
-            team of professionals who are passionate about technology and
-            committed to delivering exceptional results.
+            exceed our clients&apos; expectations. Our strength lies in our
+            talented team of professionals who are passionate about technology
+            and committed to delivering exceptional results.
           </p>
           <div className="cta-content">
             <FaRocket className="cta-icon" />
             <h2 className="z-2">Ready to Launch Your Project?</h2>
             <p className="z-2">
-              Let's discuss how SMATICA can help transform your business.
+              Let&apos;s discuss how SMATICA can help transform your business.
             </p>
             <button className="cta-button">
               Get in Touch

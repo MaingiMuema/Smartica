@@ -31,8 +31,8 @@ const Contact = () => {
           <div className="contact-info">
             <h2>Get in Touch</h2>
             <p>
-              We'd love to hear from you. Reach out to us for any inquiries or
-              collaborations.
+              We&apos;d love to hear from you. Reach out to us for any inquiries
+              or collaborations.
             </p>
             <div className="contact-details">
               <div className="contact-item">
