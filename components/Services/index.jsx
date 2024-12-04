@@ -124,11 +124,11 @@ const ServicesPage = () => {
         </div>
         <div className="cta-section">
           <h2>Ready to transform your business?</h2>
-          <p className="z-2">
+          <p className="">
             Let&apos;s discuss how our services can help you achieve your goals.
           </p>
           <button
-            className="cta-button z-2"
+            className="cta-button"
             onClick={() => router.push("/contact")}
           >
             Get in Touch
