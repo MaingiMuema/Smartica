@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <Link href="/" className="logo">
-          <img src="/Smartica logo.png" alt="SMATICA" width={100} />
+          <img src="/smatica logo.png" alt="SMATICA" width={100} />
         </Link>
         <div
           className={`menu-icon ${isMenuOpen ? "open" : ""}`}

@@ -1,1 +1,1 @@
-# Smartica
+# Smatica

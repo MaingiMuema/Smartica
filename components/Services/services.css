@@ -5,7 +5,14 @@ html {
 }
 
 .services-page {
-  background: linear-gradient(135deg, #20b6d9, #f1d755);
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
   min-height: 100vh;
   padding: 6rem 5%;
   color: #ffffff;
@@ -109,6 +116,7 @@ html {
   transition: all 0.3s ease;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 1px;
   z-index: 2;
 }
@@ -141,8 +149,9 @@ html {
 .cta-section p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.8);
+  position: relative;
   z-index: 2;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .cta-button {
@@ -157,6 +166,7 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
   z-index: 2;
 }
 

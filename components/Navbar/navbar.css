@@ -4,13 +4,15 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #20b6d9;
+  background-color: #fddc3a92;
   padding: 10px 0 10px 0;
   transition: background-color 0.3s ease;
+  border-bottom: 1px solid #4a90e2;
 }
 
 .navbar.scrolled {
-  background-color: #20b6d9;
+  border-bottom: 1px solid #4a90e2;
+  background-color: #20b7d94c;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,29 +43,31 @@
 }
 
 .nav-menu a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-  color: #fdde3a;
+  color: #4a90e2;
 }
 
 .cta-button a {
-  background-color: #fdde3a;
-  color: #20b6d9;
+  background-color: #20b6d9;
+  color: #fdde3a;
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
 
 #demo {
-  background-color: #fdde3a;
-  color: #20b6d9;
+  background-color: #20b6d9;
+  color: #fdde3a;
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
   margin-top: -7px;
+  cursor: pointer;
+  border: none;
 }
 
 #demo:hover {

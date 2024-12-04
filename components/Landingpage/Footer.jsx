@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: pawadd01@gmail.com</p>
+          <a href="mailto:pawadd01@gmail.com ">info@smatica.com</a>
           <p>Phone: +1 (123) 456-7890</p>
         </div>
         <div className="footer-section">

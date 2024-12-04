@@ -12,9 +12,34 @@ export default function DemoPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    try {
+      const response = await fetch('/api/demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit demo request');
+      }
+
+      // Clear form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+
+      alert('Demo request submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting demo request:', error);
+      alert('Failed to submit demo request. Please try again.');
+    }
   };
 
   return (
@@ -37,7 +62,7 @@ export default function DemoPage() {
               </p>
 
               <div className="trust-banner">
-                <p>Trusted by innovative companies worldwide</p>
+                <p style={{ color: "#fff" }}>Trusted by innovative companies worldwide</p>
                 <div className="logo-strip">
                   {/* Add company logos here */}
                   <div className="company-logo">Safaricom</div>
@@ -76,8 +101,8 @@ export default function DemoPage() {
             <div className="form-section">
               <div className="form-card">
                 <div className="form-header">
-                  <h2>Book Your Personalized Demo</h2>
-                  <p>See our platform in action with your own data</p>
+                  <h2 style={{ color: "#fff" }}>Book Your Personalized Demo</h2>
+                  <p style={{ color: "#fff" }}>See our platform in action with your own data</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                   <div className="input-group">
@@ -85,7 +110,6 @@ export default function DemoPage() {
                     <input
                       type="text"
                       placeholder="John Smith"
-                      value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
@@ -97,7 +121,6 @@ export default function DemoPage() {
                     <input
                       type="email"
                       placeholder="john@company.com"
-                      value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
@@ -109,7 +132,6 @@ export default function DemoPage() {
                     <input
                       type="text"
                       placeholder="Your Company Name"
-                      value={formData.company}
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
@@ -120,7 +142,6 @@ export default function DemoPage() {
                     <label>What are your main challenges?</label>
                     <textarea
                       placeholder="Tell us about your specific needs..."
-                      value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
@@ -140,7 +161,7 @@ export default function DemoPage() {
                   <div className="benefit-card">
                     <div className="benefit-icon">🎯</div>
                     <h4>Tailored Walkthrough</h4>
-                    <p>
+                    <p style={{ color: "#fff" }}>
                       Custom demo focused on your industry and specific use
                       cases
                     </p>
@@ -148,17 +169,17 @@ export default function DemoPage() {
                   <div className="benefit-card">
                     <div className="benefit-icon">💡</div>
                     <h4>Solution Design</h4>
-                    <p>Technical architecture and implementation planning</p>
+                    <p style={{ color: "#fff" }}>Technical architecture and implementation planning</p>
                   </div>
                   <div className="benefit-card">
                     <div className="benefit-icon">📊</div>
                     <h4>ROI Analysis</h4>
-                    <p>Detailed breakdown of expected returns and timeline</p>
+                    <p style={{ color: "#fff" }}>Detailed breakdown of expected returns and timeline</p>
                   </div>
                   <div className="benefit-card">
                     <div className="benefit-icon">🤝</div>
                     <h4>Next Steps</h4>
-                    <p>
+                    <p style={{ color: "#fff" }}>
                       Clear action plan for moving forward with implementation
                     </p>
                   </div>

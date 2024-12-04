@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
 import {
@@ -14,73 +15,72 @@ import BackgroundAnimation from "../BackgroundAnimation/BackgroundAnimation";
 
 const teamMembers = [
   {
+    name: "Dodman Mwaura",
+    role: "Co-founder, Director & Process Automation Specialist",
+    image: "/Headshot Pic - Dodman Clear.jpg",
+    bio: "Streamlines business processes through cutting-edge automation solutions.",
+  },
+  {
     name: "John Lodenyo",
     role: "Co-founder, Director & Data Analyst",
-    image: "/path/to/john-lodenyo.jpg",
+    image: "/lodenyo_passport-removebg-preview.png",
     bio: "Expert in transforming complex data into actionable insights.",
   },
   {
     name: "Agnes Nyareso",
     role: "Director & Web App Developer",
-    image: "/path/to/agnes-nyareso.jpg",
+    image: "/portrait_picture.jpg",
     bio: "Passionate about creating intuitive and powerful web applications.",
   },
   {
     name: "Rawelyn Pili",
     role: "Co-founder, Director & Technical Lead",
-    image: "/path/to/rawelyn-pili.jpg",
+    image: "/pili_passport.jpeg",
     bio: "Drives innovation and ensures technical excellence in all projects.",
-  },
-  {
-    name: "Dodman Mwaura",
-    role: "Co-founder, Director & Process Automation Specialist",
-    image: "/path/to/dodman-mwaura.jpg",
-    bio: "Streamlines business processes through cutting-edge automation solutions.",
   },
 ];
 
 const AboutUsPage = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      import("particles.js").then(() => {
-        particlesJS("vision-particles", {
-          particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: "#ffffff" },
-            shape: { type: "circle" },
-            opacity: { value: 0.5, random: false },
-            size: { value: 3, random: true },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#ffffff",
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 6,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-            },
+      require("particles.js");
+      particlesJS("vision-particles", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
           },
-          interactivity: {
-            detect_on: "canvas",
-            events: {
-              onhover: { enable: true, mode: "repulse" },
-              onclick: { enable: true, mode: "push" },
-              resize: true,
-            },
-            modes: {
-              repulse: { distance: 100, duration: 0.4 },
-              push: { particles_nb: 4 },
-            },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
           },
-          retina_detect: true,
-        });
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
       });
     }
   }, []);

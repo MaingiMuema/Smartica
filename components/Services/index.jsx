@@ -10,6 +10,8 @@ import {
 import "./services.css";
 import Navbar from "@/components/Navbar/Navbar";
 import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const services = [
   {
@@ -87,14 +89,16 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  const router = useRouter();
+
   return (
     <>
       <Navbar />
       <BackgroundAnimation />
       <div className="services-page">
         <div className="services-hero mt-10">
-          <h1>Our Services</h1>
-          <p>Empowering your business with innovative technology solutions</p>
+          <h1 style={{ color: "white" }}>Our Services</h1>
+          <p style={{ color: "white" }}>Empowering your business with innovative technology solutions</p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
@@ -107,7 +111,14 @@ const ServicesPage = () => {
                   <li key={idx}>{detail}</li>
                 ))}
               </ul>
-              <button className="learn-more-btn">Learn More</button>
+              <Link
+                href={`/services/${service.title
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")}`}
+                className="learn-more-btn"
+              >
+                Learn More
+              </Link>
             </div>
           ))}
         </div>
@@ -116,7 +127,12 @@ const ServicesPage = () => {
           <p className="z-2">
             Let&apos;s discuss how our services can help you achieve your goals.
           </p>
-          <button className="cta-button z-2">Get in Touch</button>
+          <button
+            className="cta-button z-2"
+            onClick={() => router.push("/contact")}
+          >
+            Get in Touch
+          </button>
         </div>
       </div>
     </>

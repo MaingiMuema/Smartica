@@ -51,7 +51,7 @@ const HeroSection = () => {
         <button className="cta-button">Learn More</button>
       </div>
       <div className="hero-image">
-        <Image src="/hero-img.jpg" alt="Hero Image" width={500} height={500} />
+        <Image src="/hero-img.png" alt="Hero Image" width={500} height={500} />
       </div>
     </section>
   );
